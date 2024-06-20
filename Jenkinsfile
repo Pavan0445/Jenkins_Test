@@ -2,7 +2,8 @@ pipeline {
     agent any
 
     environment {
-        AWS_ACCESS_KEY_ID     = credentials('AWS_ACCESS_KEY_ID')
+        // Use Jenkins credentials to set environment variables
+        AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')
         AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
     }
 
@@ -40,4 +41,5 @@ pipeline {
             // Clean up the workspace after the build
             cleanWs()
         }
-   
+    }
+}
