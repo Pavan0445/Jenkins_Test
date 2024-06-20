@@ -13,7 +13,7 @@ pipeline {
         stage('checkout') {
             steps {
                  script{
-                        dir("terraform")
+                        dir("Jenkins_Test")
                         {
                             git "https://github.com/Pavan0445/Jenkins_Test.git"
                         }
